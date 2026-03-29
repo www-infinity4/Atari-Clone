@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gitpals – Your GitHub AI Companions</title>
+  <link rel="stylesheet" href="gitpals.css" />
+</head>
+<body>
+
+  <!-- ═══ HERO ═══════════════════════════════════════════════════════════ -->
+  <header class="hero">
+    <div class="hero-inner">
+      <h1 class="hero-title">Gitpals</h1>
+      <p class="hero-sub">Your on-screen AI companions that live inside GitHub</p>
+      <div class="orb-row" aria-label="Gitpals orb previews">
+        <div class="orb orb-pal"  title="Gitpal">GP</div>
+        <div class="orb orb-pub"  title="Gitpub">📡</div>
+        <div class="orb orb-pro"  title="Gitpro">🛸</div>
+        <div class="orb orb-pin"  title="Gitpin">∆</div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ═══ PALS GRID ═══════════════════════════════════════════════════════ -->
+  <main class="main">
+    <section class="section">
+      <h2 class="section-heading">Meet Your Gitpals</h2>
+      <div class="pals-grid">
+
+        <!-- Gitpal -->
+        <article class="pal-card" id="gitpal">
+          <div class="pal-orb orb-pal">GP</div>
+          <h3 class="pal-name">Gitpal</h3>
+          <p class="pal-tagline">Ace the Palace – your pop-up orb companion</p>
+          <ul class="pal-features">
+            <li>Floats alongside your GitHub workflow</li>
+            <li>Suggests pinned content &amp; trending repos</li>
+            <li>Recommends your next professional move</li>
+            <li>Contextual conversation that follows you</li>
+          </ul>
+          <div class="pal-demo" aria-label="Gitpal demo chat">
+            <div class="demo-bubble bot">
+              👋 Hey! You've been on this PR for 40 min.
+              Want me to pin a related issue?
+            </div>
+            <div class="demo-bubble user">Yes, pin it!</div>
+            <div class="demo-bubble bot">✅ Pinned. Also – trending fork alert for this repo.</div>
+          </div>
+          <div class="pal-actions">
+            <button class="pal-btn btn-pal" data-pal="gitpal">Activate Gitpal</button>
+            <a class="pal-repo-link"
+               href="https://github.com/www-infinity4/Gitpal"
+               target="_blank" rel="noopener noreferrer">
+              View Gitpal repo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Gitpub -->
+        <article class="pal-card" id="gitpub">
+          <div class="pal-orb orb-pub">📡</div>
+          <h3 class="pal-name">Gitpub</h3>
+          <p class="pal-tagline">Publisher "Pubby" – your repo broadcast station</p>
+          <ul class="pal-features">
+            <li>Checks all repos are published &amp; live</li>
+            <li>Emits file signals on every push</li>
+            <li>Builds repos with integrated tools</li>
+            <li>Live deployment health dashboard</li>
+          </ul>
+          <div class="pal-demo" aria-label="Gitpub demo output">
+            <div class="demo-bubble bot">
+              📡 Scanning 12 repos… 2 are unpublished.
+            </div>
+            <div class="demo-bubble user">Fix and deploy both.</div>
+            <div class="demo-bubble bot">🚀 Deployed! Pages live at gh-pages. Signal emitted.</div>
+          </div>
+          <div class="pal-actions">
+            <button class="pal-btn btn-pub" data-pal="gitpub">Activate Gitpub</button>
+            <a class="pal-repo-link"
+               href="https://github.com/www-infinity4/Gitpub"
+               target="_blank" rel="noopener noreferrer">
+              View Gitpub repo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Gitpro -->
+        <article class="pal-card" id="gitpro">
+          <div class="pal-orb orb-pro">🛸</div>
+          <h3 class="pal-name">Gitpro</h3>
+          <p class="pal-tagline">Quantum Mechanic – top-level page architect</p>
+          <ul class="pal-features">
+            <li>Premium page content edits &amp; rewrites</li>
+            <li>Advanced styling &amp; design suggestions</li>
+            <li>Adds smart assimilations across repos</li>
+            <li>Architecture review &amp; refactor plans</li>
+          </ul>
+          <div class="pal-demo" aria-label="Gitpro demo output">
+            <div class="demo-bubble bot">
+              🛸 Detected 3 design inconsistencies in your README.
+            </div>
+            <div class="demo-bubble user">Fix and style them.</div>
+            <div class="demo-bubble bot">✨ Rewritten. New hero banner + badge set deployed.</div>
+          </div>
+          <div class="pal-actions">
+            <button class="pal-btn btn-pro" data-pal="gitpro">Activate Gitpro</button>
+            <a class="pal-repo-link"
+               href="https://github.com/www-infinity4/Gitpro"
+               target="_blank" rel="noopener noreferrer">
+              View Gitpro repo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Gitpin -->
+        <article class="pal-card" id="gitpin">
+          <div class="pal-orb orb-pin">∆</div>
+          <h3 class="pal-name">Gitpin</h3>
+          <p class="pal-tagline">Vector Triangulator – precision content pinner</p>
+          <ul class="pal-features">
+            <li>Triangulates best content to pin</li>
+            <li>Tracks vectors across your project graph</li>
+            <li>Smart priority ranking for issues &amp; PRs</li>
+            <li>Signal-based pinning across multiple repos</li>
+          </ul>
+          <div class="pal-demo" aria-label="Gitpin demo output">
+            <div class="demo-bubble bot">
+              ∆ Vectorizing 47 open issues… top 3 ranked.
+            </div>
+            <div class="demo-bubble user">Pin the top one.</div>
+            <div class="demo-bubble bot">📌 Pinned: #12 "Fit to Android mobile breakpoint." Vector locked.</div>
+          </div>
+          <div class="pal-actions">
+            <button class="pal-btn btn-pin" data-pal="gitpin">Activate Gitpin</button>
+            <a class="pal-repo-link"
+               href="https://github.com/www-infinity4/Gitpin"
+               target="_blank" rel="noopener noreferrer">
+              View Gitpin repo →
+            </a>
+          </div>
+        </article>
+
+        <!-- Gitflow -->
+        <article class="pal-card" id="gitflow">
+          <div class="pal-orb orb-flow">🌊</div>
+          <h3 class="pal-name">Gitflow</h3>
+          <p class="pal-tagline">Flow Manager – branch strategy &amp; workflow optimizer</p>
+          <ul class="pal-features">
+            <li>Visual branching strategy dashboard</li>
+            <li>Guides feature, release &amp; hotfix flows</li>
+            <li>Merge conflict early-warning system</li>
+            <li>Links your team's workflow into one stream</li>
+          </ul>
+          <div class="pal-demo" aria-label="Gitflow demo output">
+            <div class="demo-bubble bot">
+              🌊 3 branches are stale &amp; diverging from main.
+            </div>
+            <div class="demo-bubble user">Merge the oldest one.</div>
+            <div class="demo-bubble bot">✅ Merged feature/android-layout into main. Conflict-free.</div>
+          </div>
+          <div class="pal-actions">
+            <button class="pal-btn btn-flow" data-pal="gitflow">Activate Gitflow</button>
+            <a class="pal-repo-link"
+               href="https://github.com/www-infinity4/Gitflow"
+               target="_blank" rel="noopener noreferrer">
+              View Gitflow repo →
+            </a>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- ═══ SWITCHBOARD ════════════════════════════════════════════════════ -->
+    <section class="section switchboard-section">
+      <h2 class="section-heading">🔌 Pal Switchboard</h2>
+      <p class="section-lead">
+        Each Gitpal can hand off tasks to another — like a switchboard operator
+        routing calls. Activate a pal below to see how they plug into each other.
+      </p>
+      <div class="switchboard" id="switchboard">
+        <div class="sb-node sb-pal"  data-pal="gitpal"  title="Gitpal — session companion">GP</div>
+        <div class="sb-node sb-pub"  data-pal="gitpub"  title="Gitpub — publisher">📡</div>
+        <div class="sb-node sb-pro"  data-pal="gitpro"  title="Gitpro — quantum mechanic">🛸</div>
+        <div class="sb-node sb-pin"  data-pal="gitpin"  title="Gitpin — vector pinner">∆</div>
+        <div class="sb-node sb-flow" data-pal="gitflow" title="Gitflow — branch manager">🌊</div>
+      </div>
+      <div class="sb-log" id="sbLog" aria-live="polite"></div>
+    </section>
+
+    <!-- ═══ FLOATING ORB DEMO ══════════════════════════════════════════════ -->
+    <section class="section orb-demo-section">
+      <h2 class="section-heading">How Gitpals Work</h2>
+      <p class="section-lead">
+        Each Gitpal appears as a floating orb on your GitHub page. Click the orb to open
+        a contextual conversation panel. The orb follows your scroll, stays out of the way,
+        and surfaces only when it has something useful to say.
+      </p>
+      <div class="flow-steps">
+        <div class="step">
+          <div class="step-num">1</div>
+          <p>Install the Gitpals browser extension or GitHub App</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">2</div>
+          <p>Choose which pals to activate (mix &amp; match)</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">3</div>
+          <p>Orbs appear on your repos and follow your sessions</p>
+        </div>
+        <div class="step-arrow">→</div>
+        <div class="step">
+          <div class="step-num">4</div>
+          <p>Each pal acts in its domain — publish, pin, style, or suggest</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══ FOOTER ═══════════════════════════════════════════════════════════ -->
+  <footer class="footer">
+    <p>Atari 2026 &nbsp;|&nbsp; Gitpals &nbsp;|&nbsp;
+      <a href="../fit-to-android/taskpane.html">Fit to Android Add-in →</a>
+      &nbsp;|&nbsp;
+      <a href="../index.html">← Home</a>
+    </p>
+  </footer>
+
+  <!-- ═══ FLOATING ORB (Live Demo) ═════════════════════════════════════════ -->
+  <div class="floating-orb" id="floatingOrb" title="Gitpal is here!" role="button" tabindex="0" aria-label="Open Gitpal">
+    GP
+  </div>
+  <div class="orb-panel" id="orbPanel" role="dialog" aria-label="Gitpal conversation panel">
+    <div class="orb-panel-header">
+      <span id="orbPanelTitle">👋 Gitpal</span>
+      <button class="orb-close" id="orbClose" aria-label="Close">✕</button>
+    </div>
+    <div class="orb-messages" id="orbMessages">
+      <div class="demo-bubble bot">Hi! I'm Gitpal. I follow you around GitHub and help you stay productive. Try the other pals too!</div>
+    </div>
+    <div class="orb-input-row">
+      <input type="text" id="orbInput" placeholder="Ask Gitpal anything…" />
+      <button id="orbSend">➤</button>
+    </div>
+  </div>
+
+  <script src="gitpals.js"></script>
+</body>
+</html>

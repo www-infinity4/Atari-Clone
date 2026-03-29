@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atari 2026</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --dark:   #0f172a;
+      --pal:    #6c47ff;
+      --android:#3ddc84;
+      --text:   #1e293b;
+      --muted:  #64748b;
+      --border: #e2e8f0;
+      --bg:     #f8fafc;
+    }
+
+    body {
+      font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Hero */
+    .hero {
+      background: linear-gradient(135deg, var(--dark) 0%, #1e1b4b 100%);
+      color: #fff;
+      padding: 80px 24px 64px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 10vw, 96px);
+      font-weight: 900;
+      letter-spacing: -3px;
+      background: linear-gradient(90deg, #a78bfa, #38bdf8, #3ddc84, #fbbf24);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 16px;
+    }
+
+    .hero p {
+      font-size: clamp(14px, 2.5vw, 18px);
+      color: rgba(255,255,255,.65);
+      max-width: 520px;
+      margin: 0 auto 40px;
+      line-height: 1.6;
+    }
+
+    /* Sites Grid */
+    .sites {
+      max-width: 900px;
+      margin: -36px auto 0;
+      padding: 0 20px 60px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .site-card {
+      background: #fff;
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 28px 24px 24px;
+      box-shadow: 0 4px 24px rgba(0,0,0,.07);
+      text-decoration: none;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      transition: transform .2s, box-shadow .2s;
+    }
+
+    .site-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 40px rgba(0,0,0,.12);
+    }
+
+    .site-icon {
+      font-size: 40px;
+    }
+
+    .site-title {
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--dark);
+    }
+
+    .site-desc {
+      font-size: 13px;
+      color: var(--muted);
+      line-height: 1.6;
+      flex: 1;
+    }
+
+    .card-actions {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .site-link {
+      font-size: 12px;
+      font-weight: 700;
+      color: #fff;
+      padding: 9px 14px;
+      border-radius: 8px;
+      display: inline-block;
+      text-align: center;
+      text-decoration: none;
+      transition: opacity .15s;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    .site-link:hover { opacity: .85; }
+
+    .link-android         { background: var(--android); color: #073042; }
+    .link-android-dl      { background: #073042; color: var(--android); }
+    .link-android-preview { background: #e8f5e9; color: #073042; border: 1px solid var(--android); }
+    .link-gitpals         { background: var(--pal); }
+
+    /* Footer */
+    footer {
+      margin-top: auto;
+      background: var(--dark);
+      color: rgba(255,255,255,.45);
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+    }
+
+    footer a { color: #a78bfa; text-decoration: none; }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>Atari 2026</h1>
+    <p>Two tools. One repo. Built for the next generation of GitHub workflows.</p>
+  </header>
+
+  <main class="sites">
+
+    <!-- Fit to Android card -->
+    <div class="site-card">
+      <div class="site-icon">📱</div>
+      <div class="site-title">Fit to Android</div>
+      <p class="site-desc">
+        A Microsoft Office Add-in that reformats your Word, Excel, or PowerPoint
+        document for Android screen sizes — phone, tablet, foldable, or custom.
+        Works alongside the existing "Fit to Desktop" feature.
+      </p>
+      <div class="card-actions">
+        <!-- Download manifest.xml for sideloading into Microsoft Office -->
+        <a class="site-link link-android"
+           href="fit-to-android/manifest.xml"
+           download="FitToAndroid-manifest.xml">
+          ⬇️ Download for Microsoft Office
+        </a>
+        <a class="site-link link-android-preview"
+           href="fit-to-android/taskpane.html">
+          Open Add-in Preview →
+        </a>
+      </div>
+    </div>
+
+    <!-- Gitpals card -->
+    <a class="site-card" href="gitpals/index.html">
+      <div class="site-icon">🛸</div>
+      <div class="site-title">Gitpals</div>
+      <p class="site-desc">
+        Five floating AI orb companions that live on your GitHub pages:
+        <strong>Gitpal</strong> (session helper), <strong>Gitpub</strong> (publisher 📡),
+        <strong>Gitpro</strong> (quantum mechanic 🛸), <strong>Gitpin</strong> (vector pinner ∆),
+        and <strong>Gitflow</strong> (branch manager 🌊).
+      </p>
+      <span class="site-link link-gitpals">Meet the Pals →</span>
+    </a>
+
+  </main>
+
+  <footer>
+    <p>Atari 2026 &mdash; <a href="https://github.com/www-infinity4/Atari-Clone">github.com/www-infinity4/Atari-Clone</a></p>
+  </footer>
+
+</body>
+</html>

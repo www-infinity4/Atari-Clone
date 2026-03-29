@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Fit to Android – Microsoft Office Add-in</title>
+  <link rel="stylesheet" href="taskpane.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo-row">
+      <span class="logo-icon">📱</span>
+      <span class="logo-text">Fit to Android</span>
+    </div>
+    <p class="tagline">Optimize your Office document for Android screens</p>
+  </header>
+
+  <main class="content">
+
+    <!-- Device Preset Selector -->
+    <section class="section">
+      <h2 class="section-title">Android Device Preset</h2>
+      <div class="preset-grid" id="presetGrid">
+        <button class="preset-btn active" data-id="phone" data-width="360" data-height="800" data-dpi="420">
+          <span class="preset-icon">📱</span>
+          <span class="preset-label">Phone<br/><small>360 × 800</small></span>
+        </button>
+        <button class="preset-btn" data-id="phoneXL" data-width="412" data-height="915" data-dpi="480">
+          <span class="preset-icon">📱</span>
+          <span class="preset-label">Phone XL<br/><small>412 × 915</small></span>
+        </button>
+        <button class="preset-btn" data-id="tablet" data-width="600" data-height="1024" data-dpi="240">
+          <span class="preset-icon">📟</span>
+          <span class="preset-label">Tablet<br/><small>600 × 1024</small></span>
+        </button>
+        <button class="preset-btn" data-id="tabletXL" data-width="800" data-height="1280" data-dpi="160">
+          <span class="preset-icon">💻</span>
+          <span class="preset-label">Tablet XL<br/><small>800 × 1280</small></span>
+        </button>
+        <button class="preset-btn" data-id="foldable" data-width="1080" data-height="2400" data-dpi="393">
+          <span class="preset-icon">📲</span>
+          <span class="preset-label">Foldable<br/><small>1080 × 2400</small></span>
+        </button>
+        <button class="preset-btn" data-id="custom" data-width="0" data-height="0">
+          <span class="preset-icon">✏️</span>
+          <span class="preset-label">Custom</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Custom Dimensions (hidden by default) -->
+    <section class="section" id="customSection" style="display:none;">
+      <h2 class="section-title">Custom Dimensions (dp)</h2>
+      <div class="input-row">
+        <label for="customWidth">Width</label>
+        <input type="number" id="customWidth" min="200" max="2000" value="360" placeholder="360" />
+        <span class="unit">dp</span>
+      </div>
+      <div class="input-row">
+        <label for="customHeight">Height</label>
+        <input type="number" id="customHeight" min="300" max="4000" value="800" placeholder="800" />
+        <span class="unit">dp</span>
+      </div>
+    </section>
+
+    <!-- Formatting Options -->
+    <section class="section">
+      <h2 class="section-title">Formatting Options</h2>
+      <label class="toggle-row">
+        <input type="checkbox" id="optMargins" checked />
+        <span class="toggle-label">Adjust page margins for mobile</span>
+      </label>
+      <label class="toggle-row">
+        <input type="checkbox" id="optFontScale" checked />
+        <span class="toggle-label">Scale font sizes for readability</span>
+      </label>
+      <label class="toggle-row">
+        <input type="checkbox" id="optImages" checked />
+        <span class="toggle-label">Resize images to fit screen width</span>
+      </label>
+      <label class="toggle-row">
+        <input type="checkbox" id="optTables" />
+        <span class="toggle-label">Simplify tables for small screens</span>
+      </label>
+      <label class="toggle-row">
+        <input type="checkbox" id="optOrientation" />
+        <span class="toggle-label">Landscape orientation</span>
+      </label>
+    </section>
+
+    <!-- Action Buttons -->
+    <section class="section actions">
+      <button class="btn btn-primary" id="btnFitAndroid">
+        📱 Fit to Android
+      </button>
+      <button class="btn btn-secondary" id="btnFitDesktop">
+        🖥️ Fit to Desktop
+      </button>
+      <button class="btn btn-ghost" id="btnReset">
+        ↩ Reset to Original
+      </button>
+    </section>
+
+    <!-- Status Message -->
+    <div class="status" id="statusMsg" aria-live="polite"></div>
+
+    <!-- Preview Panel -->
+    <section class="section">
+      <h2 class="section-title">Preview</h2>
+      <div class="preview-frame" id="previewFrame">
+        <div class="preview-device" id="previewDevice">
+          <div class="preview-screen" id="previewScreen">
+            <p class="preview-hint">Apply formatting to see a preview</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Download / Sideload section -->
+    <section class="section">
+      <h2 class="section-title">Sideload into Microsoft Office</h2>
+      <p style="font-size:12px;color:#5f6368;line-height:1.6;margin-bottom:10px;">
+        To use this add-in in Word, Excel, or PowerPoint:
+        download the manifest then go to
+        <em>Insert → Add-ins → Upload My Add-in</em> and select the file.
+      </p>
+      <a class="btn btn-primary" href="manifest.xml" download="FitToAndroid-manifest.xml"
+         style="text-decoration:none;font-size:12px;">
+        ⬇️ Download manifest.xml
+      </a>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <span>Atari 2026 &mdash; Fit to Android v1.0 &mdash;
+      <a href="../index.html" style="color:var(--android-green);">← Back to Home</a>
+    </span>
+  </footer>
+
+  <!-- Office.js -->
+  <script src="https://appsforoffice.microsoft.com/lib/1.1/hosted/office.js"></script>
+  <script src="taskpane.js"></script>
+</body>
+</html>
